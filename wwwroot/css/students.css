@@ -1,0 +1,88 @@
+﻿/* General Form Styling */
+.form-horizontal .form-group {
+    margin-bottom: 15px;
+}
+
+.form-horizontal label {
+    font-weight: bold;
+}
+
+/* Styling for the Create button on the List Page */
+.create-button-container {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+    .create-button-container .btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+/* Table Styling */
+.table-striped {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    .table-striped th, .table-striped td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    .table-striped tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+/* Button Styling */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #004085;
+    }
+
+/* Input Field Styling */
+input[type="text"], input[type="file"], input[type="number"] {
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center;
+}
+
+    .form-inline .float-left {
+        float: left;
+    }
+
+.float-right {
+    float: right;
+}
+
+/* Clear floats after both elements */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.form-control {
+    margin-right: 10px; /* Add spacing between input and button */
+}
+
+.btn {
+    margin-left: 10px; /* Optional, spacing for buttons */
+}

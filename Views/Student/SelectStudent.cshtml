@@ -1,0 +1,18 @@
+﻿@model IEnumerable<DataAccessLayer.Entities.Student>
+
+<h2>Select a Student</h2>
+
+<form method="get" asp-action="StudentDetails">
+    <div class="form-group">
+        <label for="studentId">Select Student:</label>
+        <select id="studentId" name="studentId" class="form-control">
+            <option value="">-- Select Student --</option>
+            @foreach (var student in Model)
+            {
+                <option value="@student.Id">@student.Name</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Get Details</button>
+</form>

@@ -1,0 +1,38 @@
+﻿@model DataAccessLayer.Models.StudentSubjectsViewModel
+
+<h2>Details for @Model.Student.Name</h2>
+
+<p><strong>Class:</strong> @Model.Student.Class</p>
+
+<h3>Subjects</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Subject</th>
+            <th>Languages</th>
+            <th>Teachers</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var subject in Model.Subjects)
+        {
+            <tr>
+                <td>@subject.Name</td>
+                <td>
+                    @foreach (var lang in subject.SubjectLanguages)
+                    {
+                        @lang.Language
+                        <br />
+                    }
+                </td>
+                <td>
+                    @foreach (var ts in subject.TeacherSubjects)
+                    {
+                        @ts.Teachers.Name
+                        <br />
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
